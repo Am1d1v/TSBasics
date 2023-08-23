@@ -2,6 +2,7 @@
 
 // Primitives
 
+/*
 
 // Numbers
 let x = 10;
@@ -32,4 +33,33 @@ console.log(typeof(str2));
 let ii: any = 1;
 ii = 'str';
 
+let aa: unknown = 1;
+if(typeof aa === 'number'){
+    console.log('Number');
+}
+*/
 
+// Functions
+
+/*
+function sum(a: number, b: number): number{
+    return a + b;
+}
+console.log(sum(10,100));
+
+
+function helloName(name: string): void{
+    console.log('Hello, ', name);
+}
+
+function crash(): never{
+    throw new Error('error'); 
+}
+*/
+
+function log(name: string, userID?: number){
+    return (`Hello user ${name} with ID: ${userID || ''} `);
+}
+
+console.log(log('Dima', 12345));
+console.log(log('Name1'));
