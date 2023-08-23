@@ -57,9 +57,45 @@ function crash(): never{
 }
 */
 
+/*
 function log(name: string, userID?: number){
     return (`Hello user ${name} with ID: ${userID || ''} `);
 }
 
 console.log(log('Dima', 12345));
 console.log(log('Name1'));
+
+
+function sum(...numbers: number[]){
+    const sum = numbers.reduce((current, total) =>  current+total, 0);
+    return sum;
+};
+
+console.log(sum(1, 2, 3));
+*/
+
+// Object Types
+
+interface ICar{
+    wheels: number,
+    brand: string,
+    type: string,
+    isNew?: boolean,
+
+    [key: string]: unknown
+}
+
+const car: ICar = {
+    wheels: 4,
+    brand: 'Brand Name',
+    type: 'Some Type'
+}
+
+const car2: ICar = {
+    wheels: 6,
+    brand: 'Brand Name',
+    type: 'Some Type' 
+}
+car2.go = true;
+car2['color'] = "white";
+console.log(car2);
