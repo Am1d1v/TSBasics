@@ -76,6 +76,8 @@ console.log(sum(1, 2, 3));
 
 // Object Types
 
+/*
+
 interface ICar{
     wheels: number,
     brand: string,
@@ -99,3 +101,76 @@ const car2: ICar = {
 car2.go = true;
 car2['color'] = "white";
 console.log(car2);
+*/
+
+// Function with object
+
+/*
+function printPoint(point: {x: string, y: string}): void {
+    console.log(`X:${point.x} Y:${point.y}`);
+}
+
+const point1 = {
+    x: '2',
+    y: '2'
+}
+printPoint(point1);
+
+const point2 = {
+    x: '10',
+    y: '10',
+    z: '10'
+}
+printPoint(point2);
+
+
+function printUser( user: {
+    firstName: string,
+    secondName?: string
+}): void{
+    console.log((`Hello, ${user.firstName}`).toUpperCase());
+
+    if(user.secondName){
+        console.log((`Your surname is: ${user.secondName}`).toUpperCase());
+    }
+};
+
+const user = {
+    firstName: 'Dima',
+    secondName: 'Surname'
+}
+printUser(user);
+*/
+
+// Arrays
+
+const arr = [1, 2, 3];
+
+const strs: string[] = [];
+strs.push('arrayItem0');
+//strs.push(2); Error
+console.log(strs);
+
+
+interface ICar {
+    wheels: number;
+    brand: string;
+}
+
+const cars: ICar[] = [];
+cars.push({wheels: 4, brand: "BrandName"});
+console.log(cars);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
