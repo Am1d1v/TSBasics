@@ -177,9 +177,26 @@ printArr(arr);
 
 // Tuples
 
+/*
 const pairs: [string, string][] = [['key1', 'value1'], ['key2', 'value2']];
 
 const data: [number, boolean, string] = [1, true, 'srting'];
+*/
+
+// Aliases
+
+type MyBoolean = false | true;
+
+type Pair = [string, string];
+type Pairs = Pair[];
+
+type User = {
+    name: string;
+    surname: string;
+    birthYear: number;
+}
+
+
 
 
 
