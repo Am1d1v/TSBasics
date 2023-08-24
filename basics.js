@@ -140,3 +140,12 @@ console.log(strs);
 var cars = [];
 cars.push({ wheels: 4, brand: "BrandName" });
 console.log(cars);
+var arrOfArray = [];
+arrOfArray.push(['123']);
+console.log(arrOfArray);
+function printArr(arr) {
+    arr.forEach(function (el, index) {
+        console.log(el, index);
+    });
+}
+printArr(arr);

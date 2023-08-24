@@ -162,10 +162,16 @@ cars.push({wheels: 4, brand: "BrandName"});
 console.log(cars);
 
 
+const arrOfArray: string[][] = [];
+arrOfArray.push(['123'])
+console.log(arrOfArray);
 
-
-
-
+function printArr(arr: unknown[]): void{
+    arr.forEach((el, index) => {
+        console.log(el, index);
+    });
+}
+printArr(arr);
 
 
 
