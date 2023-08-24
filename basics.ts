@@ -229,6 +229,7 @@ welcome('Name1');
 
 // Enum
 
+/*
 enum KindOfShape {
     Circle, // 0
     Square  // 1
@@ -252,4 +253,5 @@ function serverStatus(currentStatus: StatusCode){
 }
 serverStatus(200);
 serverStatus(404);
+*/
 

@@ -15,10 +15,18 @@ const user1: IUser = {
     password: '123'
 }
 
+interface IPerson {
+    name: string;
+    surname: string;
+    age: number;
+    phone?: number;
+}
 
 
-
-
+interface Employee extends IUser, IPerson {
+    contractStart: Date,
+}
+//const person1: Employee = {};
 
 
 

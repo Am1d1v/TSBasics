@@ -3,3 +3,4 @@ var user1 = {
     login: 'a',
     password: '123'
 };
+//const person1: Employee = {};
