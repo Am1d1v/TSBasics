@@ -185,6 +185,7 @@ const data: [number, boolean, string] = [1, true, 'srting'];
 
 // Aliases
 
+/*
 type MyBoolean = false | true;
 
 type Pair = [string, string];
@@ -195,12 +196,31 @@ type User = {
     surname: string;
     birthYear: number;
 }
+*/
+
+// Union
+
+type Status = 'ok' | 'loading' | 'error';
+
+const server: Status = 'loading';
+
+function printID(id: number | string): void{
+    if(typeof(id) === 'string'){
+        console.log(id.toUpperCase());
+    } else {
+        console.log(id);
+    }
+}
+printID('username');
+printID(123);
 
 
-
-
-
-
-
-
-
+function welcome(persone: [string, string] | string){
+    if(Array.isArray(persone)){
+        console.log(`Hello, ${persone.join(' ')}`);
+    } else {
+        console.log(`Hello, ${persone}`);
+    }
+}
+welcome(['Name', 'Surname']);
+welcome('Name1');
