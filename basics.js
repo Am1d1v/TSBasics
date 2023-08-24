@@ -132,20 +132,36 @@ const user = {
 printUser(user);
 */
 // Arrays
-var arr = [1, 2, 3];
-var strs = [];
+/*
+const arr = [1, 2, 3];
+
+const strs: string[] = [];
 strs.push('arrayItem0');
 //strs.push(2); Error
 console.log(strs);
-var cars = [];
-cars.push({ wheels: 4, brand: "BrandName" });
+
+
+interface ICar {
+    wheels: number;
+    brand: string;
+}
+
+const cars: ICar[] = [];
+cars.push({wheels: 4, brand: "BrandName"});
 console.log(cars);
-var arrOfArray = [];
-arrOfArray.push(['123']);
+
+
+const arrOfArray: string[][] = [];
+arrOfArray.push(['123'])
 console.log(arrOfArray);
-function printArr(arr) {
-    arr.forEach(function (el, index) {
+
+function printArr(arr: unknown[]): void{
+    arr.forEach((el, index) => {
         console.log(el, index);
     });
 }
 printArr(arr);
+*/
+// Tuples
+var pairs = [['key1', 'value1'], ['key2', 'value2']];
+var data = [1, true, 'srting'];

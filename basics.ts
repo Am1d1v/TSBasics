@@ -144,6 +144,7 @@ printUser(user);
 
 // Arrays
 
+/*
 const arr = [1, 2, 3];
 
 const strs: string[] = [];
@@ -172,7 +173,13 @@ function printArr(arr: unknown[]): void{
     });
 }
 printArr(arr);
+*/
 
+// Tuples
+
+const pairs: [string, string][] = [['key1', 'value1'], ['key2', 'value2']];
+
+const data: [number, boolean, string] = [1, true, 'srting'];
 
 
 
