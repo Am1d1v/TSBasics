@@ -34,6 +34,7 @@ interface Employee extends IUser, IPerson {
 
 // Aliases
 
+/*
 type Union1 = 'a' | 'b' | 'c';
 type Union2 = 'a' | 'b' |'q' | 'w' | 'e';
 type Union3 = Union1 | Union2;
@@ -41,4 +42,30 @@ type Union3 = Union1 | Union2;
 type Union4 = 'r' | 't';
 type Union5 = 'r' | 'y';
 type Union6 = Union4 & Union5;
+*/
+
+type Union1 = 'name' | 'surname';
+type Union2 = 'phoneNumber' | 'birthDate';
+
+type Union3 = {name: string, surname: string} & {phoneNumber: number, birthDate: Date};
+
+const user: Union3 = {
+    name: 'Name1',
+    surname: 'Surname1',
+    birthDate: new Date(1990, 6, 6),
+    phoneNumber: 1234567890
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
