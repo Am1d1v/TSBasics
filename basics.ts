@@ -200,6 +200,7 @@ type User = {
 
 // Union
 
+/*
 type Status = 'ok' | 'loading' | 'error';
 
 const server: Status = 'loading';
@@ -224,3 +225,31 @@ function welcome(persone: [string, string] | string){
 }
 welcome(['Name', 'Surname']);
 welcome('Name1');
+*/
+
+// Enum
+
+enum KindOfShape {
+    Circle, // 0
+    Square  // 1
+};
+
+const myShape = KindOfShape.Circle;
+
+
+enum StatusCode {
+    ERROR = 500,
+    NOT_FOUND = 404,
+    OK = 200
+}
+
+function serverStatus(currentStatus: StatusCode){
+    if(currentStatus === 200){
+        console.log('Server is OK');
+    } else {
+        console.log('Connection Failed');
+    }
+}
+serverStatus(200);
+serverStatus(404);
+
