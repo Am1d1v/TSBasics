@@ -1,25 +1,11 @@
 // Interfaces
-/*
-function typeOfCreature(creature: Fish | Bird){
-    if('swim' in creature){
-        console.log('Creature is fish')
-    } else if('fly' in creature){
-        console.log('Creature if bird');
+function assertDisplayName(user) {
+    if (!user.displayName) {
+        throw new Error('User has no DisplayName Field');
     }
 }
-
-const creature1: Fish = {
-    swim: () => {
-    }
+function logUserByDisplayName(user) {
+    var _a;
+    assertDisplayName(user);
+    console.log((_a = user.displayName) === null || _a === void 0 ? void 0 : _a.toUpperCase());
 }
-*/
-function creatureIsFish(creature) {
-    return creature.swim !== undefined;
-}
-function isNull(val) {
-    return !val;
-}
-var empty = '';
-var zero = 0;
-isNull(empty);
-isNull(zero);

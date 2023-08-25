@@ -98,6 +98,7 @@ example3([123]);
 
 // Type Guards
 
+/*
 type Fish = {swim: () => void};
 type Bird = {fly: () => void};
 
@@ -115,10 +116,30 @@ const creature1: Fish = {
     }
 }
 */
+/*
 function creatureIsFish(creature: Fish | Bird): creature is Fish{
     return (creature as Fish).swim !== undefined;   
 }
+*/
 
+// Asserts
+
+type User = {
+    name: string,
+    displayName: string | null,
+}
+
+function assertDisplayName(user: User): asserts user is User & {displayName: string}{
+    if(!user.displayName){
+        throw new Error('User has no DisplayName Field');
+    }
+}
+
+function logUserByDisplayName(user: User){
+    assertDisplayName(user);
+
+    console.log(user.displayName.toUpperCase());
+}
 
 
 
