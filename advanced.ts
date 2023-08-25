@@ -60,6 +60,7 @@ const user: Union3 = {
 
 // Narrowing
 
+/*
 function example(x: number | string){
     if(typeof x === 'string'){
         console.log(x.toUpperCase());
@@ -93,11 +94,30 @@ function example3(x: number[] | Date){
 }
 example3(new Date(1990, 10, 5));
 example3([123]);
+*/
 
+// Type Guards
 
+type Fish = {swim: () => void};
+type Bird = {fly: () => void};
 
+/*
+function typeOfCreature(creature: Fish | Bird){
+    if('swim' in creature){
+        console.log('Creature is fish')
+    } else if('fly' in creature){
+        console.log('Creature if bird');
+    }
+}
 
-
+const creature1: Fish = {
+    swim: () => {
+    }
+}
+*/
+function creatureIsFish(creature: Fish | Bird): creature is Fish{
+    return (creature as Fish).swim !== undefined;   
+}
 
 
 
