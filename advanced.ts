@@ -124,6 +124,7 @@ function creatureIsFish(creature: Fish | Bird): creature is Fish{
 
 // Asserts
 
+/*
 type User = {
     name: string,
     displayName: string | null,
@@ -139,6 +140,13 @@ function logUserByDisplayName(user: User){
     assertDisplayName(user);
 
     console.log(user.displayName.toUpperCase());
+}
+*/
+
+// This
+
+function clickHandler(this: HTMLButtonElement, e: Event){
+    this.disabled = true;
 }
 
 
