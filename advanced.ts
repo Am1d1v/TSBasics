@@ -44,6 +44,7 @@ type Union5 = 'r' | 'y';
 type Union6 = Union4 & Union5;
 */
 
+/*
 type Union1 = 'name' | 'surname';
 type Union2 = 'phoneNumber' | 'birthDate';
 
@@ -55,11 +56,43 @@ const user: Union3 = {
     birthDate: new Date(1990, 6, 6),
     phoneNumber: 1234567890
 }
+*/
+
+// Narrowing
+
+function example(x: number | string){
+    if(typeof x === 'string'){
+        console.log(x.toUpperCase());
+    } else if (typeof x === 'number'){
+        console.log(`x is number ${x}`);
+    } else if (x === undefined){ 
+        console.log('No Value');
+    }
+}
+example('q');
+example(0);
 
 
+function example2(str: string | string[] | null){
+    if(str && typeof str === 'object'){
+        console.log(str.join(' '));
+    } else if (typeof str === 'string'){
+        console.log(str.toUpperCase());
+    }
+}
+example2(['Something', 'Something']);
+example2('user');
 
 
-
+function example3(x: number[] | Date){
+    if(x instanceof Date){
+        console.log(x.getMonth());
+    } else {
+        console.log(Array.isArray(x));
+    }
+}
+example3(new Date(1990, 10, 5));
+example3([123]);
 
 
 
