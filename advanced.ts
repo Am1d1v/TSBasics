@@ -145,9 +145,32 @@ function logUserByDisplayName(user: User){
 
 // This
 
+/*
 function clickHandler(this: HTMLButtonElement, e: Event){
     this.disabled = true;
 }
+*/
+
+// Recursive Types
+
+type NestedNumbers = number | NestedNumbers[];
+
+const nums: NestedNumbers = [1, 2, 3, [1, 2, 3, [1, 2, 3]]];
+//nums.push('str'); Error
+
+type JSONPrimitives = string | number | boolean | null;
+type JSONObject = {[k: string]: JSONValue};
+type JSONArray = JSONValue[];
+type JSONValue = JSONPrimitives | JSONObject | JSONArray;
+
+
+function isJSON(arg: JSONValue){
+
+};
+isJSON('Str');
+isJSON(1);
+isJSON({a: 123, b: {x: 1}});
+
 
 
 
