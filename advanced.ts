@@ -183,3 +183,40 @@ if( num > 5){
 }
 console.log(word!.toUpperCase());
 
+function printName(name?: string){
+    const fullName: string = name!;    
+}
+
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+function printName2(person?: Person){
+    console.log(person!.name);    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

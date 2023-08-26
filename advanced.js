@@ -164,3 +164,9 @@ if (num > 5) {
     word = 'abc';
 }
 console.log(word.toUpperCase());
+function printName(name) {
+    var fullName = name;
+}
+function printName2(person) {
+    console.log(person.name);
+}
