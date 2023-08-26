@@ -153,6 +153,7 @@ function clickHandler(this: HTMLButtonElement, e: Event){
 
 // Recursive Types
 
+/*
 type NestedNumbers = number | NestedNumbers[];
 
 const nums: NestedNumbers = [1, 2, 3, [1, 2, 3, [1, 2, 3]]];
@@ -170,7 +171,15 @@ function isJSON(arg: JSONValue){
 isJSON('Str');
 isJSON(1);
 isJSON({a: 123, b: {x: 1}});
+*/
 
+// Exclamation Mark
 
+let word: string | null = null;
+const num = 10;
 
+if( num > 5){
+    word = 'abc';
+}
+console.log(word!.toUpperCase());
 
